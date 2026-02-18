@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consistency Dial</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark">
+
+<header>
+  <h1>Consistency Dial</h1>
+  <div class="controls">
+    <select id="subjectSelect"></select>
+    <button id="addSubjectBtn">+ Subject</button>
+    <button id="modeToggle">Toggle Mode</button>
+    <button id="exportBtn">Export CSV</button>
+  </div>
+</header>
+
+<section class="calendar">
+  <h3 id="dateDisplay"></h3>
+</section>
+
+<section class="timer-section">
+  <svg id="progressRing" width="250" height="250">
+    <circle
+      cx="125"
+      cy="125"
+      r="100"
+      stroke-width="15"
+      class="bg-ring"
+    />
+    <circle
+      cx="125"
+      cy="125"
+      r="100"
+      stroke-width="15"
+      class="progress-ring"
+      stroke-dasharray="628"
+      stroke-dashoffset="628"
+    />
+  </svg>
+  <h2 id="timeDisplay">00:00</h2>
+  <div class="timer-buttons">
+    <button id="startBtn">Start</button>
+    <button id="stopBtn">Stop</button>
+  </div>
+</section>
+
+<section class="stats">
+  <p>Current Streak: <span id="currentStreak">0</span></p>
+  <p>Longest Streak: <span id="longestStreak">0</span></p>
+</section>
+
+<script src="js/storage.js"></script>
+<script src="js/timer.js"></script>
+<script src="js/export.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
